@@ -33,10 +33,6 @@ x_labels<-gsub("..", "",x_labels, fixed=TRUE)
 names(x_train)<-x_labels
 #keeping only mean and std measurments
 x_train<-select(x_train, contains("mean"), contains("std"))
-
-#x_train<-x_train[,grepl("mean|std", names(x_train))]
-
-
 #merging all train data
 train_data<-cbind(subject_train, y_train, x_train)
 #removing files not to be used any more
@@ -61,8 +57,6 @@ x_labels<-gsub("..", "",x_labels, fixed=TRUE)
 names(x_test)<-x_labels
 #keeping only mean and std measurments
 x_test<-select(x_test, contains("mean"), contains("std"))
-#x_test<-x_test[,grepl("mean()|std()", names(x_test))]
-
 #merging all test data
 test_data<-cbind(subject_test, y_test, x_test)
 #removing files not to be used any more
@@ -77,3 +71,7 @@ names(data)<-tolower(names(data))
 #for each activity and each subject
 data<-tbl_df(data)
 mean_df<-data%>%group_by(subject, activity)%>%summarise_each(funs(mean))
+View(mean_df)
+
+#export mean_df to your working directory
+#write.table(mean_df, file="mean_df.txt", row.names=FALSE)
