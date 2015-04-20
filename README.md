@@ -1,4 +1,4 @@
-# Getting_and_Cleaning_Data_2
+#### Getting and Cleaning Data - Course project
 *note to grader, i'm not a native english speaker/writer. please forgive any spelling/Grammer mistakes. thx!*
 
 
