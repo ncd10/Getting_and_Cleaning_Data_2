@@ -1,5 +1,5 @@
 # Getting_and_Cleaning_Data_2
-#note to grader, i'm not a native english speaker/writer. please forgive any spelling/Grammer mistakes. thx!
+note to grader, i'm not a native english speaker/writer. please forgive any spelling/Grammer mistakes. thx!
 
 
 this folder repo contains a R script file which prouduces two data sets from the UCI HAR datasets:
