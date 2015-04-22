@@ -71,6 +71,7 @@ names(data)<-tolower(names(data))
 #for each activity and each subject
 data<-tbl_df(data)
 mean_df<-data%>%group_by(subject, activity)%>%summarise_each(funs(mean))
+rm(data)
 View(mean_df)
 
 #export mean_df to your working directory
